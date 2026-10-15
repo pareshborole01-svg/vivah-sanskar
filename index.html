@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>विवाह संस्कार विभाग | श्री स्वामी समर्थ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #74158f;
+    --dark-purple: #420b50;
+    --gold: #e5ad32;
+    --cream: #fff8e9;
+    --text: #371b42;
+}
+
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    min-height: 100vh;
+    padding: 25px 12px;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 10%, #fff0c8, transparent 35%),
+        linear-gradient(135deg, #fff7e8, #f5eaf9, #fff0d8);
+}
+
+/* MAIN WEBSITE CARD */
+.page {
+    max-width: 650px;
+    margin: auto;
+    padding: 28px 23px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid var(--gold);
+    border-radius: 27px;
+    background: linear-gradient(145deg, #fffdf6, #fff4df);
+    box-shadow:
+        0 10px 0 #d9c7a6,
+        0 24px 55px #4d205125,
+        inset 0 0 35px #edcf8240;
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid #e4c77f;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.decor {
+    color: #9b267e;
+    font-size: 23px;
+    letter-spacing: 8px;
+    margin-bottom: 22px;
+}
+
+/* TWO LOGOS */
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    margin-bottom: 22px;
+}
+
+.logo-item {
+    width: 135px;
+}
+
+.logo-frame {
+    width: 105px;
+    height: 105px;
+    margin: auto;
+    padding: 5px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    background: white;
+    box-shadow:
+        0 5px 0 #bd8824,
+        0 10px 20px #5e26702b;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 50%;
+}
+
+.logo-name {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--dark-purple);
+}
+
+.mantra {
+    font-size: 27px;
+    font-weight: 800;
+    color: #8c246f;
+    margin: 16px 0;
+    text-shadow: 1px 2px 0 #f2d8a2;
+}
+
+.organization {
+    font-size: 18px;
+    line-height: 1.9;
+    font-weight: 800;
+    color: #51234d;
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #896548;
+    margin-top: 5px;
+}
+
+.ornament {
+    margin: 21px 0;
+    color: #a62d84;
+    font-size: 23px;
+}
+
+/* DEPARTMENT BANNER */
+.department {
+    padding: 17px 10px;
+    margin: 15px 0 22px;
+    border: 2px solid #f4d477;
+    border-radius: 17px;
+    color: #fff0bd;
+    background: linear-gradient(110deg, #4b075e, #8d20a9, #5b0c70);
+    box-shadow:
+        0 7px 0 #3a0848,
+        0 15px 25px #64137830,
+        inset 0 2px 4px #ffffff45;
+    text-shadow: 1px 2px 3px #2e063b;
+}
+
+.department h2 {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.department p {
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* INTRO */
+.intro {
+    font-size: 14px;
+    line-height: 2;
+    color: #775b49;
+    margin-bottom: 22px;
+}
+
+/* SOCIAL CARDS */
+.social-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 21px 0;
+    padding: 20px;
+    text-decoration: none;
+    text-align: left;
+    color: var(--text);
+    border: 1px solid #e5c77c;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #fffdf7);
+    box-shadow:
+        0 7px 0 #e2d3b9,
+        0 14px 28px #55216c17;
+    transition: transform .22s, box-shadow .22s;
+}
+
+.social-card::before {
+    content: "";
+    position: absolute;
+    height: 9px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #6d1689, #d74d9d, #edb12d);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 0 #e2d3b9,
+        0 20px 32px #55216c25;
+}
+
+.social-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 3px 0 #e2d3b9;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 5px 0 17px;
+}
+
+.icon-box {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    border: 1px solid #e8d9ef;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #f5e8ff, #ffffff);
+    box-shadow:
+        0 4px 0 #e4d5e9,
+        inset 0 2px 4px #ffffff;
+}
+
+.facebook .icon-box {
+    color: #2865bf;
+}
+
+.instagram .icon-box {
+    color: #c52a86;
+}
+
+.whatsapp .icon-box {
+    color: #138d55;
+    background: linear-gradient(145deg, #e5ffed, #ffffff);
+}
+
+.youtube .icon-box {
+    color: #e00000;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+    color: #35163f;
+}
+
+.tagline {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 4px 9px;
+    border-radius: 20px;
+    background: #f0dff7;
+    color: #77358a;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+}
+
+.description {
+    margin: 12px 0 20px;
+    font-size: 15px;
+    line-height: 2;
+    color: #655467;
+}
+
+.description strong {
+    color: #49224f;
+}
+
+.open-button {
+    display: block;
+    width: 100%;
+    padding: 16px 10px;
+    border: 2px solid #e8bd57;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+    background: linear-gradient(110deg, #67148b, #9e27b5);
+    box-shadow:
+        0 6px 0 #4a0c67,
+        0 11px 20px #7b208b30,
+        inset 0 2px 4px #ffffff45;
+}
+
+.open-button.gold {
+    background: linear-gradient(110deg, #b96b00, #eea51c);
+    box-shadow:
+        0 6px 0 #925000,
+        0 11px 20px #c17a0e30,
+        inset 0 2px 4px #ffffff45;
+}
+
+.open-button.green {
+    background: linear-gradient(110deg, #087b49, #20b96c);
+    box-shadow:
+        0 6px 0 #075832,
+        0 11px 20px #087b4930,
+        inset 0 2px 4px #ffffff45;
+}
+
+.open-button.red {
+    background: linear-gradient(110deg, #bd0000, #f03838);
+    box-shadow:
+        0 6px 0 #800000,
+        0 11px 20px #bd000030,
+        inset 0 2px 4px #ffffff45;
+}
+
+.arrow {
+    font-family: Arial, sans-serif;
+    margin-left: 8px;
+    font-size: 22px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px dashed #d6b866;
+    color: #7b2671;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.footer small {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #866b55;
+}
+
+@media (max-width: 430px) {
+    .page {
+        padding: 24px 15px;
+    }
+
+    .logos {
+        gap: 8px;
+    }
+
+    .logo-item {
+        width: 125px;
+    }
+
+    .logo-frame {
+        width: 86px;
+        height: 86px;
+    }
+
+    .organization {
+        font-size: 16px;
+    }
+
+    .department h2 {
+        font-size: 22px;
+    }
+
+    .social-card {
+        padding: 16px;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 29px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .open-button {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+<div class="content">
+
+    <div class="decor">✿ ❖ ✿ ❖ ✿</div>
+
+    <!-- दोन्ही लोगो -->
+    <div class="logos">
+
+        <div class="logo-item">
+            <div class="logo-frame">
+                <img src="vivah-logo.png"
+                     alt="विवाह संस्कार विभाग लोगो"
+                     class="logo">
+            </div>
+            <span class="logo-name">विवाह संस्कार विभाग</span>
+        </div>
+
+        <div class="logo-item">
+            <div class="logo-frame">
+                <img src="marg-logo.png"
+                     alt="श्री स्वामी समर्थ सेवा मार्ग लोगो"
+                     class="logo">
+            </div>
+            <span class="logo-name">श्री स्वामी समर्थ सेवा मार्ग</span>
+        </div>
+
+    </div>
+
+    <!-- स्वामींची प्रतिमा नाही -->
+    <h1 class="mantra">॥ श्री स्वामी समर्थ ॥</h1>
+
+    <h2 class="organization">
+        श्री स्वामी समर्थ सेवा व आध्यात्मिक विकास मार्ग
+        <br>(दिंडोरी प्रणीत)
+    </h2>
+
+    <p class="subtitle">
+        अखिल भारतीय श्री स्वामी समर्थ गुरुपीठ, त्र्यंबकेश्वर
+    </p>
+
+    <div class="ornament">❀ ━━━━━ ✿ ━━━━━ ❀</div>
+
+    <section class="department">
+        <h2>विवाह संस्कार विभाग</h2>
+        <p>VIVAH SANSKAR VIBHAG</p>
+    </section>
+
+    <p class="intro">
+        🌸 संस्कारांनी बांधूया सुखी संसार 🌸
+        <br>
+        आमच्या अधिकृत सोशल मीडिया पेजेसना भेट द्या.
+    </p>
+
+    <!-- FACEBOOK PAGE -->
+    <a class="social-card facebook"
+       href="https://www.facebook.com/share/18Qy7CJqkr/"
+       target="_blank" rel="noopener noreferrer">
+
+        <div class="card-head">
+            <div class="icon-box">f</div>
+            <div class="info">
+                <span class="title">Facebook Page</span>
+                <span class="tagline">OFFICIAL PAGE</span>
+            </div>
+        </div>
+
+        <p class="description">
+            <strong>फेसबुक पेज</strong> — विवाह संस्कार विभागाची माहिती आणि उपक्रम पाहण्यासाठी येथे भेट द्या.
+        </p>
+
+        <div class="open-button">
+            फेसबुक पेज उघडा <span class="arrow">→</span>
+        </div>
+    </a>
+
+    <!-- FACEBOOK POST -->
+    <a class="social-card facebook"
+       href="https://www.facebook.com/share/p/187wnzPbiZ/"
+       target="_blank" rel="noopener noreferrer">
+
+        <div class="card-head">
+            <div class="icon-box">f</div>
+            <div class="info">
+                <span class="title">Facebook Post</span>
+                <span class="tagline">LATEST UPDATES</span>
+            </div>
+        </div>
+
+        <p class="description">
+            <strong>फेसबुक पोस्ट</strong> — विभागाची पोस्ट आणि संबंधित माहिती पाहण्यासाठी येथे भेट द्या.
+        </p>
+
+        <div class="open-button">
+            फेसबुक पोस्ट उघडा <span class="arrow">→</span>
+        </div>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a class="social-card instagram"
+       href="https://www.instagram.com/vivah_sanskar_vibhag?igsh=ZGF1dng1b2ZjbTZq"
+       target="_blank" rel="noopener noreferrer">
+
+        <div class="card-head">
+            <div class="icon-box">◎</div>
+            <div class="info">
+                <span class="title">Instagram</span>
+                <span class="tagline">FOLLOW OUR PAGE</span>
+            </div>
+        </div>
+
+        <p class="description">
+            <strong>इन्स्टाग्राम</strong> — विवाह संस्कार विभागाचे फोटो, अपडेट्स आणि उपक्रम पाहा.
+        </p>
+
+        <div class="open-button">
+            Instagram उघडा <span class="arrow">→</span>
+        </div>
+    </a>
+
+    <!-- WHATSAPP -->
+    <a class="social-card whatsapp"
+       href="https://whatsapp.com/channel/0029Vb752hoAzNc3u3Nyww1I"
+       target="_blank" rel="noopener noreferrer">
+
+        <div class="card-head">
+            <div class="icon-box">◉</div>
+            <div class="info">
+                <span class="title">WhatsApp Channel</span>
+                <span class="tagline">JOIN OUR CHANNEL</span>
+            </div>
+        </div>
+
+        <p class="description">
+            <strong>व्हॉट्सॲप चॅनेल</strong> — विभागाची माहिती व नवीन अपडेट्स मिळवण्यासाठी चॅनेलला भेट द्या.
+        </p>
+
+        <div class="open-button green">
+            WhatsApp चॅनेल उघडा <span class="arrow">→</span>
+        </div>
+    </a>
+
+    <!-- YOUTUBE -->
+    <a class="social-card youtube"
+       href="https://www.youtube.com/channel/UC5mIaJno_3MmoNbn0NWwwJg?view_as=subscriber"
+       target="_blank" rel="noopener noreferrer">
+
+        <div class="card-head">
+            <div class="icon-box">▶</div>
+            <div class="info">
+                <span class="title">YouTube Channel</span>
+                <span class="tagline">WATCH OUR VIDEOS</span>
+            </div>
+        </div>
+
+        <p class="description">
+            <strong>यूट्यूब चॅनेल</strong> — विभागाशी संबंधित व्हिडिओ आणि मार्गदर्शन पाहा.
+        </p>
+
+        <div class="open-button red">
+            YouTube चॅनेल उघडा <span class="arrow">→</span>
+        </div>
+    </a>
+
+    <footer class="footer">
+        ❀ ॥ श्री स्वामी समर्थ ॥ ❀
+        <small>विवाह संस्कार विभाग • दिंडोरी प्रणीत</small>
+        <small>मंगलमय शुभेच्छा!</small>
+    </footer>
+
+</div>
+</main>
+
+</body>
+</html>
